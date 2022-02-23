@@ -1,4 +1,10 @@
 GET http://localhost:3333/jokes
 ###
-GET http://localhost:3333/jokes/1
+GET http://localhost:3333/jokes/2
 ###
+GET http://localhost:3333/books/1
+###
+
+
+
+

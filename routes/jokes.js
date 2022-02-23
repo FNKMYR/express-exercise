@@ -27,13 +27,18 @@ let jokes = [
  * Create a GET /joke route, that returns all jokes.
  */
 router.get("/", (req, res, next) => {
-  // …
+  res.send(jokes);
 });
 
 /**
  * Exercise 2
  * Create a GET /joke/:id route, that returns the joke for the given id.
  */
+router.get("/:id", (req, res, next) => {
+  const { id } = req.params;
+  const joke = jokes.find((joke) => joke.id == id);
+  res.json(joke);
+});
 
 // …
 
