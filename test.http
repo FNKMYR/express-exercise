@@ -1,10 +1,37 @@
 GET http://localhost:3333/jokes
 ###
-GET http://localhost:3333/jokes/2
+GET http://localhost:3333/jokes/62179a98ca4d50dd8ccb522d
 ###
-GET http://localhost:3333/books/1
+POST http://localhost:3333/jokes/
+Content-Type: application/json
+
+{
+  "text": "This right here is the fourth joke by said author without the date key.",
+  "author": "Jens"
+}
 ###
 
+PATCH http://localhost:3333/jokes/6217a22a5aee9e810e3d7a41
+Content-Type: application/json
+
+{
+  "text": "The updated time should now differ from the created time."
+}
+
+###
+
+DELETE http://localhost:3333/jokes/62179f670710ec12b7f1525e
 
 
+###
 
+POST http://localhost:3333/people/
+Content-Type: application/json
+
+{
+  "name": "Jens Hinkebein",
+  "email": "jens.hinkebein@gmail.com"
+}
+
+###
+GET http://localhost:3333/people/
